@@ -1,0 +1,595 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL = app$/;"	m
+ARGS	Makefile	/^ARGS ?= -l $(BUILD_DIR)\/nemu-log.txt$/;"	m
+BINARY	Makefile	/^BINARY ?= $(BUILD_DIR)\/$(NAME)$/;"	m
+BUILD_DIR	Makefile	/^BUILD_DIR ?= .\/build$/;"	m
+CC	Makefile	/^CC = gcc$/;"	m
+INCLUDES	Makefile	/^INCLUDES  = $(addprefix -I, $(INC_DIR))$/;"	m
+LD	Makefile	/^LD = gcc$/;"	m
+NAME	Makefile	/^NAME = nemu$/;"	m
+NEMU_EXEC	Makefile	/^NEMU_EXEC := $(BINARY) $(ARGS)$/;"	m
+OBJS	Makefile	/^OBJS = $(SRCS:src\/%.c=$(OBJ_DIR)\/%.o)$/;"	m
+OBJ_DIR	Makefile	/^OBJ_DIR ?= $(BUILD_DIR)\/obj$/;"	m
+SRCS	Makefile	/^SRCS = $(shell find src\/ -name "*.c")$/;"	m
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+DEBUG	include/common.h	4;"	d
+__COMMON_H__	include/common.h	2;"	d
+bool	include/common.h	/^typedef uint8_t bool;$/;"	t
+false	include/common.h	26;"	d
+ioaddr_t	include/common.h	/^typedef uint16_t ioaddr_t;$/;"	t
+paddr_t	include/common.h	/^typedef uint32_t paddr_t;$/;"	t
+rtlreg_t	include/common.h	/^typedef uint32_t rtlreg_t;$/;"	t
+true	include/common.h	27;"	d
+vaddr_t	include/common.h	/^typedef uint32_t vaddr_t;$/;"	t
+DHelper	include/cpu/decode.h	/^typedef void (*DHelper) (vaddr_t *);$/;"	t
+DecodeInfo	include/cpu/decode.h	/^} DecodeInfo;$/;"	t	typeref:struct:__anon4
+E	include/cpu/decode.h	/^make_DHelper(E);$/;"	v
+E2G	include/cpu/decode.h	/^make_DHelper(E2G);$/;"	v
+G2E	include/cpu/decode.h	/^make_DHelper(G2E);$/;"	v
+I	include/cpu/decode.h	/^make_DHelper(I);$/;"	v
+I2E	include/cpu/decode.h	/^make_DHelper(I2E);$/;"	v
+I2a	include/cpu/decode.h	/^make_DHelper(I2a);$/;"	v
+I2r	include/cpu/decode.h	/^make_DHelper(I2r);$/;"	v
+I_E2G	include/cpu/decode.h	/^make_DHelper(I_E2G);$/;"	v
+I_G2E	include/cpu/decode.h	/^make_DHelper(I_G2E);$/;"	v
+J	include/cpu/decode.h	/^make_DHelper(J);$/;"	v
+ModR_M	include/cpu/decode.h	/^} ModR_M;$/;"	t	typeref:union:__anon5
+O2a	include/cpu/decode.h	/^make_DHelper(O2a);$/;"	v
+OP_STR_SIZE	include/cpu/decode.h	10;"	d
+OP_TYPE_IMM	include/cpu/decode.h	/^enum { OP_TYPE_REG, OP_TYPE_MEM, OP_TYPE_IMM };$/;"	e	enum:__anon1
+OP_TYPE_MEM	include/cpu/decode.h	/^enum { OP_TYPE_REG, OP_TYPE_MEM, OP_TYPE_IMM };$/;"	e	enum:__anon1
+OP_TYPE_REG	include/cpu/decode.h	/^enum { OP_TYPE_REG, OP_TYPE_MEM, OP_TYPE_IMM };$/;"	e	enum:__anon1
+Operand	include/cpu/decode.h	/^} Operand;$/;"	t	typeref:struct:__anon2
+R_M	include/cpu/decode.h	/^    uint8_t R_M		:3;$/;"	m	struct:__anon5::__anon6
+SI	include/cpu/decode.h	/^make_DHelper(SI);$/;"	v
+SI2E	include/cpu/decode.h	/^make_DHelper(SI2E);$/;"	v
+SIB	include/cpu/decode.h	/^} SIB;$/;"	t	typeref:union:__anon8
+SI_E2G	include/cpu/decode.h	/^make_DHelper(SI_E2G);$/;"	v
+__CPU_DECODE_H__	include/cpu/decode.h	2;"	d
+a2O	include/cpu/decode.h	/^make_DHelper(a2O);$/;"	v
+addr	include/cpu/decode.h	/^    rtlreg_t addr;$/;"	m	union:__anon2::__anon3
+asm_buf	include/cpu/decode.h	/^  char asm_buf[128];$/;"	m	struct:__anon4
+assembly	include/cpu/decode.h	/^  char assembly[80];$/;"	m	struct:__anon4
+base	include/cpu/decode.h	/^    uint8_t base	:3;$/;"	m	struct:__anon8::__anon9
+dest	include/cpu/decode.h	/^  Operand src, dest, src2;$/;"	m	struct:__anon4
+dont_care	include/cpu/decode.h	/^    uint8_t dont_care	:3;$/;"	m	struct:__anon5::__anon7
+ext_opcode	include/cpu/decode.h	/^  uint8_t ext_opcode;$/;"	m	struct:__anon4
+gp2_1_E	include/cpu/decode.h	/^make_DHelper(gp2_1_E);$/;"	v
+gp2_Ib2E	include/cpu/decode.h	/^make_DHelper(gp2_Ib2E);$/;"	v
+gp2_cl2E	include/cpu/decode.h	/^make_DHelper(gp2_cl2E);$/;"	v
+gp7_E	include/cpu/decode.h	/^make_DHelper(gp7_E);$/;"	v
+id_dest	include/cpu/decode.h	72;"	d
+id_src	include/cpu/decode.h	70;"	d
+id_src2	include/cpu/decode.h	71;"	d
+imm	include/cpu/decode.h	/^    uint32_t imm;$/;"	m	union:__anon2::__anon3
+in_I2a	include/cpu/decode.h	/^make_DHelper(in_I2a);$/;"	v
+in_dx2a	include/cpu/decode.h	/^make_DHelper(in_dx2a);$/;"	v
+index	include/cpu/decode.h	/^    uint8_t index	:3;$/;"	m	struct:__anon8::__anon9
+is_jmp	include/cpu/decode.h	/^  bool is_jmp;$/;"	m	struct:__anon4
+is_operand_size_16	include/cpu/decode.h	/^  bool is_operand_size_16;$/;"	m	struct:__anon4
+jmp_eip	include/cpu/decode.h	/^  vaddr_t jmp_eip;$/;"	m	struct:__anon4
+lea_M2G	include/cpu/decode.h	/^make_DHelper(lea_M2G);$/;"	v
+make_DHelper	include/cpu/decode.h	74;"	d
+mod	include/cpu/decode.h	/^    uint8_t mod		:2;$/;"	m	struct:__anon5::__anon6
+mov_E2G	include/cpu/decode.h	/^make_DHelper(mov_E2G);$/;"	v
+mov_G2E	include/cpu/decode.h	/^make_DHelper(mov_G2E);$/;"	v
+mov_I2E	include/cpu/decode.h	/^make_DHelper(mov_I2E);$/;"	v
+mov_I2r	include/cpu/decode.h	/^make_DHelper(mov_I2r);$/;"	v
+opcode	include/cpu/decode.h	/^    uint8_t opcode		:3;$/;"	m	struct:__anon5::__anon7
+opcode	include/cpu/decode.h	/^  uint32_t opcode;$/;"	m	struct:__anon4
+out_a2I	include/cpu/decode.h	/^make_DHelper(out_a2I);$/;"	v
+out_a2dx	include/cpu/decode.h	/^make_DHelper(out_a2dx);$/;"	v
+p	include/cpu/decode.h	/^  char *p;$/;"	m	struct:__anon4
+push_SI	include/cpu/decode.h	/^make_DHelper(push_SI);$/;"	v
+r	include/cpu/decode.h	/^make_DHelper(r);$/;"	v
+reg	include/cpu/decode.h	/^    uint32_t reg;$/;"	m	union:__anon2::__anon3
+reg	include/cpu/decode.h	/^    uint8_t reg		:3;$/;"	m	struct:__anon5::__anon6
+seq_eip	include/cpu/decode.h	/^  vaddr_t seq_eip;  \/\/ sequential eip$/;"	m	struct:__anon4
+simm	include/cpu/decode.h	/^    int32_t simm;$/;"	m	union:__anon2::__anon3
+src	include/cpu/decode.h	/^  Operand src, dest, src2;$/;"	m	struct:__anon4
+src2	include/cpu/decode.h	/^  Operand src, dest, src2;$/;"	m	struct:__anon4
+ss	include/cpu/decode.h	/^    uint8_t ss		:2;$/;"	m	struct:__anon8::__anon9
+str	include/cpu/decode.h	/^  char str[OP_STR_SIZE];$/;"	m	struct:__anon2
+test_I	include/cpu/decode.h	/^make_DHelper(test_I);$/;"	v
+type	include/cpu/decode.h	/^  uint32_t type;$/;"	m	struct:__anon2
+val	include/cpu/decode.h	/^  rtlreg_t val;$/;"	m	struct:__anon2
+val	include/cpu/decode.h	/^  uint8_t val;$/;"	m	union:__anon5
+val	include/cpu/decode.h	/^  uint8_t val;$/;"	m	union:__anon8
+width	include/cpu/decode.h	/^  int width;$/;"	m	struct:__anon2
+EHelper	include/cpu/exec.h	/^typedef void (*EHelper) (vaddr_t *);$/;"	t
+__CPU_EXEC_H__	include/cpu/exec.h	2;"	d
+get_cc_name	include/cpu/exec.h	/^static inline const char* get_cc_name(int subcode) {$/;"	f
+instr_fetch	include/cpu/exec.h	/^static inline uint32_t instr_fetch(vaddr_t *eip, int len) {$/;"	f
+make_EHelper	include/cpu/exec.h	6;"	d
+print_asm	include/cpu/exec.h	37;"	d
+print_asm	include/cpu/exec.h	39;"	d
+print_asm_template1	include/cpu/exec.h	44;"	d
+print_asm_template2	include/cpu/exec.h	47;"	d
+print_asm_template3	include/cpu/exec.h	50;"	d
+suffix_char	include/cpu/exec.h	42;"	d
+CPU_state	include/cpu/reg.h	/^} CPU_state;$/;"	t	typeref:struct:__anon13
+R_AH	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_AL	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_AX	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_BH	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_BL	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_BP	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_BX	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_CH	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_CL	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_CX	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_DH	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_DI	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_DL	include/cpu/reg.h	/^enum { R_AL, R_CL, R_DL, R_BL, R_AH, R_CH, R_DH, R_BH };$/;"	e	enum:__anon12
+R_DX	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_EAX	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_EBP	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_EBX	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_ECX	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_EDI	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_EDX	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_ESI	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_ESP	include/cpu/reg.h	/^enum { R_EAX, R_ECX, R_EDX, R_EBX, R_ESP, R_EBP, R_ESI, R_EDI };$/;"	e	enum:__anon10
+R_SI	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+R_SP	include/cpu/reg.h	/^enum { R_AX, R_CX, R_DX, R_BX, R_SP, R_BP, R_SI, R_DI };$/;"	e	enum:__anon11
+_16	include/cpu/reg.h	/^				uint16_t _16;$/;"	m	union:__anon13::__anon14::__anon15::__anon16
+_32	include/cpu/reg.h	/^	  		uint32_t _32;$/;"	m	union:__anon13::__anon14::__anon15::__anon16
+_8	include/cpu/reg.h	/^				uint8_t _8[2];	$/;"	m	union:__anon13::__anon14::__anon15::__anon16
+__REG_H__	include/cpu/reg.h	2;"	d
+check_reg_index	include/cpu/reg.h	/^static inline int check_reg_index(int index) {$/;"	f
+eax	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+ebp	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+ebx	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+ecx	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+edi	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+edx	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+eip	include/cpu/reg.h	/^  vaddr_t eip;$/;"	m	struct:__anon13	typeref:union:__anon13::__anon14
+esi	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+esp	include/cpu/reg.h	/^			rtlreg_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:__anon13::__anon14::__anon17
+gpr	include/cpu/reg.h	/^	 	} gpr[8];$/;"	m	union:__anon13::__anon14	typeref:struct:__anon13::__anon14::__anon15
+reg_b	include/cpu/reg.h	49;"	d
+reg_l	include/cpu/reg.h	47;"	d
+reg_name	include/cpu/reg.h	/^static inline const char* reg_name(int index, int width) {$/;"	f
+reg_w	include/cpu/reg.h	48;"	d
+__RTL_H__	include/cpu/rtl.h	2;"	d
+c_add	include/cpu/rtl.h	15;"	d
+c_and	include/cpu/rtl.h	17;"	d
+c_or	include/cpu/rtl.h	18;"	d
+c_sar	include/cpu/rtl.h	22;"	d
+c_shl	include/cpu/rtl.h	20;"	d
+c_shr	include/cpu/rtl.h	21;"	d
+c_slt	include/cpu/rtl.h	23;"	d
+c_sltu	include/cpu/rtl.h	24;"	d
+c_sub	include/cpu/rtl.h	16;"	d
+c_xor	include/cpu/rtl.h	19;"	d
+make_rtl_arith_logic	include/cpu/rtl.h	26;"	d
+make_rtl_setget_eflags	include/cpu/rtl.h	114;"	d
+rtl_div	include/cpu/rtl.h	/^static inline void rtl_div(rtlreg_t* q, rtlreg_t* r, const rtlreg_t* src1_hi, const rtlreg_t* src1_lo, const rtlreg_t* src2) {$/;"	f
+rtl_eq0	include/cpu/rtl.h	/^static inline void rtl_eq0(rtlreg_t* dest, const rtlreg_t* src1) {$/;"	f
+rtl_eqi	include/cpu/rtl.h	/^static inline void rtl_eqi(rtlreg_t* dest, const rtlreg_t* src1, int imm) {$/;"	f
+rtl_idiv	include/cpu/rtl.h	/^static inline void rtl_idiv(rtlreg_t* q, rtlreg_t* r, const rtlreg_t* src1_hi, const rtlreg_t* src1_lo, const rtlreg_t* src2) {$/;"	f
+rtl_imul	include/cpu/rtl.h	/^static inline void rtl_imul(rtlreg_t* dest_hi, rtlreg_t* dest_lo, const rtlreg_t* src1, const rtlreg_t* src2) {$/;"	f
+rtl_li	include/cpu/rtl.h	/^static inline void rtl_li(rtlreg_t* dest, uint32_t imm) {$/;"	f
+rtl_lm	include/cpu/rtl.h	/^static inline void rtl_lm(rtlreg_t *dest, const rtlreg_t* addr, int len) {$/;"	f
+rtl_lr	include/cpu/rtl.h	/^static inline void rtl_lr(rtlreg_t* dest, int r, int width) {$/;"	f
+rtl_lr_b	include/cpu/rtl.h	/^static inline void rtl_lr_b(rtlreg_t* dest, int r) {$/;"	f
+rtl_lr_l	include/cpu/rtl.h	/^static inline void rtl_lr_l(rtlreg_t* dest, int r) {$/;"	f
+rtl_lr_w	include/cpu/rtl.h	/^static inline void rtl_lr_w(rtlreg_t* dest, int r) {$/;"	f
+rtl_msb	include/cpu/rtl.h	/^static inline void rtl_msb(rtlreg_t* dest, const rtlreg_t* src1, int width) {$/;"	f
+rtl_mul	include/cpu/rtl.h	/^static inline void rtl_mul(rtlreg_t* dest_hi, rtlreg_t* dest_lo, const rtlreg_t* src1, const rtlreg_t* src2) {$/;"	f
+rtl_mv	include/cpu/rtl.h	/^static inline void rtl_mv(rtlreg_t* dest, const rtlreg_t *src1) {$/;"	f
+rtl_neq0	include/cpu/rtl.h	/^static inline void rtl_neq0(rtlreg_t* dest, const rtlreg_t* src1) {$/;"	f
+rtl_not	include/cpu/rtl.h	/^static inline void rtl_not(rtlreg_t* dest) {$/;"	f
+rtl_pop	include/cpu/rtl.h	/^static inline void rtl_pop(rtlreg_t* dest) {$/;"	f
+rtl_push	include/cpu/rtl.h	/^static inline void rtl_push(const rtlreg_t* src1) {$/;"	f
+rtl_sext	include/cpu/rtl.h	/^static inline void rtl_sext(rtlreg_t* dest, const rtlreg_t* src1, int width) {$/;"	f
+rtl_sm	include/cpu/rtl.h	/^static inline void rtl_sm(rtlreg_t* addr, int len, const rtlreg_t* src1) {$/;"	f
+rtl_sr	include/cpu/rtl.h	/^static inline void rtl_sr(int r, int width, const rtlreg_t* src1) {$/;"	f
+rtl_sr_b	include/cpu/rtl.h	/^static inline void rtl_sr_b(int r, const rtlreg_t* src1) {$/;"	f
+rtl_sr_l	include/cpu/rtl.h	/^static inline void rtl_sr_l(int r, const rtlreg_t* src1) {$/;"	f
+rtl_sr_w	include/cpu/rtl.h	/^static inline void rtl_sr_w(int r, const rtlreg_t* src1) {$/;"	f
+rtl_update_SF	include/cpu/rtl.h	/^static inline void rtl_update_SF(const rtlreg_t* result, int width) {$/;"	f
+rtl_update_ZF	include/cpu/rtl.h	/^static inline void rtl_update_ZF(const rtlreg_t* result, int width) {$/;"	f
+rtl_update_ZFSF	include/cpu/rtl.h	/^static inline void rtl_update_ZFSF(const rtlreg_t* result, int width) {$/;"	f
+Assert	include/debug.h	29;"	d
+Log	include/debug.h	20;"	d
+Log_write	include/debug.h	17;"	d
+Log_write	include/debug.h	9;"	d
+TODO	include/debug.h	43;"	d
+__DEBUG_H__	include/debug.h	2;"	d
+panic	include/debug.h	40;"	d
+__MMIO_H__	include/device/mmio.h	2;"	d
+mmio_callback_t	include/device/mmio.h	/^typedef void(*mmio_callback_t)(paddr_t, int, bool);$/;"	t
+__PORT_IO_H__	include/device/port-io.h	2;"	d
+pio_callback_t	include/device/port-io.h	/^typedef void(*pio_callback_t)(ioaddr_t, int, bool);$/;"	t
+__MACRO_H__	include/macro.h	2;"	d
+concat	include/macro.h	8;"	d
+concat3	include/macro.h	9;"	d
+concat4	include/macro.h	10;"	d
+concat5	include/macro.h	11;"	d
+concat_temp	include/macro.h	7;"	d
+str	include/macro.h	5;"	d
+str_temp	include/macro.h	4;"	d
+__MEMORY_H__	include/memory/memory.h	2;"	d
+guest_to_host	include/memory/memory.h	9;"	d
+host_to_guest	include/memory/memory.h	11;"	d
+CR0	include/memory/mmu.h	/^typedef union CR0 {$/;"	u
+CR0	include/memory/mmu.h	/^} CR0;$/;"	t	typeref:union:CR0
+CR3	include/memory/mmu.h	/^typedef union CR3 {$/;"	u
+CR3	include/memory/mmu.h	/^} CR3;$/;"	t	typeref:union:CR3
+GateDesc	include/memory/mmu.h	/^} GateDesc;$/;"	t	typeref:union:GateDescriptor
+GateDescriptor	include/memory/mmu.h	/^typedef union GateDescriptor {$/;"	u
+NR_PDE	include/memory/mmu.h	8;"	d
+NR_PTE	include/memory/mmu.h	9;"	d
+PAGE_MASK	include/memory/mmu.h	10;"	d
+PAGE_SIZE	include/memory/mmu.h	7;"	d
+PDE	include/memory/mmu.h	/^} PDE;$/;"	t	typeref:union:PageDirectoryEntry
+PT	include/memory/mmu.h	/^typedef PTE (*PT) [NR_PTE];$/;"	t
+PTE	include/memory/mmu.h	/^} PTE;$/;"	t	typeref:union:PageTableEntry
+PT_SIZE	include/memory/mmu.h	11;"	d
+PageDirectoryEntry	include/memory/mmu.h	/^typedef union PageDirectoryEntry {$/;"	u
+PageTableEntry	include/memory/mmu.h	/^typedef union PageTableEntry {$/;"	u
+__MMU_H__	include/memory/mmu.h	2;"	d
+accessed	include/memory/mmu.h	/^    uint32_t accessed            : 1;$/;"	m	struct:PageDirectoryEntry::__anon20
+accessed	include/memory/mmu.h	/^    uint32_t accessed            : 1;$/;"	m	struct:PageTableEntry::__anon21
+dirty	include/memory/mmu.h	/^    uint32_t dirty               : 1;$/;"	m	struct:PageTableEntry::__anon21
+dont_care	include/memory/mmu.h	/^    uint32_t dont_care           : 30;$/;"	m	struct:CR0::__anon18
+dont_care0	include/memory/mmu.h	/^    uint32_t dont_care0       : 16;$/;"	m	struct:GateDescriptor::__anon22
+dont_care1	include/memory/mmu.h	/^    uint32_t dont_care1       : 15;$/;"	m	struct:GateDescriptor::__anon22
+global	include/memory/mmu.h	/^    uint32_t global              : 1;$/;"	m	struct:PageTableEntry::__anon21
+offset_15_0	include/memory/mmu.h	/^    uint32_t offset_15_0      : 16;$/;"	m	struct:GateDescriptor::__anon22
+offset_31_16	include/memory/mmu.h	/^    uint32_t offset_31_16     : 16;$/;"	m	struct:GateDescriptor::__anon22
+pad0	include/memory/mmu.h	/^    uint32_t pad0                : 1;$/;"	m	struct:PageTableEntry::__anon21
+pad0	include/memory/mmu.h	/^    uint32_t pad0                : 3;$/;"	m	struct:CR3::__anon19
+pad0	include/memory/mmu.h	/^    uint32_t pad0                : 6;$/;"	m	struct:PageDirectoryEntry::__anon20
+pad1	include/memory/mmu.h	/^    uint32_t pad1                : 3;$/;"	m	struct:PageTableEntry::__anon21
+pad1	include/memory/mmu.h	/^    uint32_t pad1                : 7;$/;"	m	struct:CR3::__anon19
+page_cache_disable	include/memory/mmu.h	/^    uint32_t page_cache_disable  : 1;$/;"	m	struct:CR3::__anon19
+page_cache_disable	include/memory/mmu.h	/^    uint32_t page_cache_disable  : 1;$/;"	m	struct:PageDirectoryEntry::__anon20
+page_cache_disable	include/memory/mmu.h	/^    uint32_t page_cache_disable  : 1;$/;"	m	struct:PageTableEntry::__anon21
+page_directory_base	include/memory/mmu.h	/^    uint32_t page_directory_base : 20;$/;"	m	struct:CR3::__anon19
+page_frame	include/memory/mmu.h	/^    uint32_t page_frame          : 20;$/;"	m	struct:PageDirectoryEntry::__anon20
+page_frame	include/memory/mmu.h	/^    uint32_t page_frame          : 20;$/;"	m	struct:PageTableEntry::__anon21
+page_write_through	include/memory/mmu.h	/^    uint32_t page_write_through  : 1;$/;"	m	struct:CR3::__anon19
+page_write_through	include/memory/mmu.h	/^    uint32_t page_write_through  : 1;$/;"	m	struct:PageDirectoryEntry::__anon20
+page_write_through	include/memory/mmu.h	/^    uint32_t page_write_through  : 1;$/;"	m	struct:PageTableEntry::__anon21
+paging	include/memory/mmu.h	/^    uint32_t paging              : 1;$/;"	m	struct:CR0::__anon18
+present	include/memory/mmu.h	/^    uint32_t present             : 1;$/;"	m	struct:PageDirectoryEntry::__anon20
+present	include/memory/mmu.h	/^    uint32_t present             : 1;$/;"	m	struct:PageTableEntry::__anon21
+present	include/memory/mmu.h	/^    uint32_t present          : 1;$/;"	m	struct:GateDescriptor::__anon22
+protect_enable	include/memory/mmu.h	/^    uint32_t protect_enable      : 1;$/;"	m	struct:CR0::__anon18
+read_write	include/memory/mmu.h	/^    uint32_t read_write          : 1; $/;"	m	struct:PageDirectoryEntry::__anon20
+read_write	include/memory/mmu.h	/^    uint32_t read_write          : 1;$/;"	m	struct:PageTableEntry::__anon21
+user_supervisor	include/memory/mmu.h	/^    uint32_t user_supervisor     : 1;$/;"	m	struct:PageDirectoryEntry::__anon20
+user_supervisor	include/memory/mmu.h	/^    uint32_t user_supervisor     : 1;$/;"	m	struct:PageTableEntry::__anon21
+val	include/memory/mmu.h	/^  uint32_t val;$/;"	m	union:CR0
+val	include/memory/mmu.h	/^  uint32_t val;$/;"	m	union:CR3
+val	include/memory/mmu.h	/^  uint32_t val;$/;"	m	union:GateDescriptor
+val	include/memory/mmu.h	/^  uint32_t val;$/;"	m	union:PageDirectoryEntry
+val	include/memory/mmu.h	/^  uint32_t val;$/;"	m	union:PageTableEntry
+__EXPR_H__	include/monitor/expr.h	2;"	d
+NEMU_END	include/monitor/monitor.h	/^enum { NEMU_STOP, NEMU_RUNNING, NEMU_END };$/;"	e	enum:__anon23
+NEMU_RUNNING	include/monitor/monitor.h	/^enum { NEMU_STOP, NEMU_RUNNING, NEMU_END };$/;"	e	enum:__anon23
+NEMU_STOP	include/monitor/monitor.h	/^enum { NEMU_STOP, NEMU_RUNNING, NEMU_END };$/;"	e	enum:__anon23
+__MONITOR_H__	include/monitor/monitor.h	2;"	d
+NO	include/monitor/watchpoint.h	/^  int NO;$/;"	m	struct:watchpoint
+WP	include/monitor/watchpoint.h	/^} WP;$/;"	t	typeref:struct:watchpoint
+__WATCHPOINT_H__	include/monitor/watchpoint.h	2;"	d
+next	include/monitor/watchpoint.h	/^  struct watchpoint *next;$/;"	m	struct:watchpoint	typeref:struct:watchpoint::watchpoint
+watchpoint	include/monitor/watchpoint.h	/^typedef struct watchpoint {$/;"	s
+__NEMU_H__	include/nemu.h	2;"	d
+decode_op_rm	src/cpu/decode/decode.c	/^static inline void decode_op_rm(vaddr_t *eip, Operand *rm, bool load_rm_val, Operand *reg, bool load_reg_val) {$/;"	f	file:
+decoding	src/cpu/decode/decode.c	/^DecodeInfo decoding;$/;"	v
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(E2G) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(G2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(I) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(I2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(I2a) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(I2r) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(I_E2G) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(Ib_G2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(J) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(O2a) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(SI2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(SI_E2G) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(a2O) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(gp2_1_E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(gp2_Ib2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(gp2_cl2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(gp7_E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(in_I2a) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(in_dx2a) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(lea_M2G) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(mov_E2G) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(mov_G2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(mov_I2E) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(mov_I2r) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(out_a2I) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(out_a2dx) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(push_SI) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(r) {$/;"	f
+make_DHelper	src/cpu/decode/decode.c	/^make_DHelper(test_I) {$/;"	f
+make_DopHelper	src/cpu/decode/decode.c	/^static inline make_DopHelper(I) {$/;"	f	file:
+make_DopHelper	src/cpu/decode/decode.c	/^static inline make_DopHelper(O) {$/;"	f	file:
+make_DopHelper	src/cpu/decode/decode.c	/^static inline make_DopHelper(SI) {$/;"	f	file:
+make_DopHelper	src/cpu/decode/decode.c	/^static inline make_DopHelper(a) {$/;"	f	file:
+make_DopHelper	src/cpu/decode/decode.c	/^static inline make_DopHelper(r) {$/;"	f	file:
+make_DopHelper	src/cpu/decode/decode.c	9;"	d	file:
+operand_write	src/cpu/decode/decode.c	/^void operand_write(Operand *op, rtlreg_t* src) {$/;"	f
+t0	src/cpu/decode/decode.c	/^rtlreg_t t0, t1, t2, t3;$/;"	v
+t1	src/cpu/decode/decode.c	/^rtlreg_t t0, t1, t2, t3;$/;"	v
+t2	src/cpu/decode/decode.c	/^rtlreg_t t0, t1, t2, t3;$/;"	v
+t3	src/cpu/decode/decode.c	/^rtlreg_t t0, t1, t2, t3;$/;"	v
+tzero	src/cpu/decode/decode.c	/^const rtlreg_t tzero = 0;$/;"	v
+load_addr	src/cpu/decode/modrm.c	/^void load_addr(vaddr_t *eip, ModR_M *m, Operand *rm) {$/;"	f
+read_ModR_M	src/cpu/decode/modrm.c	/^void read_ModR_M(vaddr_t *eip, Operand *rm, bool load_rm_val, Operand *reg, bool load_reg_val) {$/;"	f
+inv	src/cpu/exec/all-instr.h	/^make_EHelper(inv);$/;"	v
+mov	src/cpu/exec/all-instr.h	/^make_EHelper(mov);$/;"	v
+nemu_trap	src/cpu/exec/all-instr.h	/^make_EHelper(nemu_trap);$/;"	v
+operand_size	src/cpu/exec/all-instr.h	/^make_EHelper(operand_size);$/;"	v
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(adc) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(add) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(cmp) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(dec) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(div) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(idiv) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(imul1) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(imul2) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(imul3) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(inc) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(mul) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(neg) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(sbb) {$/;"	f
+make_EHelper	src/cpu/exec/arith.c	/^make_EHelper(sub) {$/;"	f
+rtl_setcc	src/cpu/exec/cc.c	/^void rtl_setcc(rtlreg_t* dest, uint8_t subcode) {$/;"	f
+make_EHelper	src/cpu/exec/control.c	/^make_EHelper(call) {$/;"	f
+make_EHelper	src/cpu/exec/control.c	/^make_EHelper(call_rm) {$/;"	f
+make_EHelper	src/cpu/exec/control.c	/^make_EHelper(jcc) {$/;"	f
+make_EHelper	src/cpu/exec/control.c	/^make_EHelper(jmp) {$/;"	f
+make_EHelper	src/cpu/exec/control.c	/^make_EHelper(jmp_rm) {$/;"	f
+make_EHelper	src/cpu/exec/control.c	/^make_EHelper(ret) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(cltd) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(cwtl) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(lea) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(leave) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(mov) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(movsx) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(movzx) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(pop) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(popa) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(push) {$/;"	f
+make_EHelper	src/cpu/exec/data-mov.c	/^make_EHelper(pusha) {$/;"	f
+EMPTY	src/cpu/exec/exec.c	14;"	d	file:
+EX	src/cpu/exec/exec.c	13;"	d	file:
+EXW	src/cpu/exec/exec.c	12;"	d	file:
+IDEX	src/cpu/exec/exec.c	11;"	d	file:
+IDEXW	src/cpu/exec/exec.c	10;"	d	file:
+decode	src/cpu/exec/exec.c	/^  DHelper decode;$/;"	m	struct:__anon24	file:
+exec_wrapper	src/cpu/exec/exec.c	/^void exec_wrapper(bool print_flag) {$/;"	f
+execute	src/cpu/exec/exec.c	/^  EHelper execute;$/;"	m	struct:__anon24	file:
+idex	src/cpu/exec/exec.c	/^static inline void idex(vaddr_t *eip, opcode_entry *e) {$/;"	f	file:
+make_EHelper	src/cpu/exec/exec.c	/^make_EHelper(real) {$/;"	f
+make_group	src/cpu/exec/exec.c	33;"	d	file:
+opcode_entry	src/cpu/exec/exec.c	/^} opcode_entry;$/;"	t	typeref:struct:__anon24	file:
+set_width	src/cpu/exec/exec.c	/^static inline void set_width(int width) {$/;"	f	file:
+update_eip	src/cpu/exec/exec.c	/^static inline void update_eip(void) {$/;"	f	file:
+width	src/cpu/exec/exec.c	/^  int width;$/;"	m	struct:__anon24	file:
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(and) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(not) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(or) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(sar) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(setcc) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(shl) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(shr) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(test) {$/;"	f
+make_EHelper	src/cpu/exec/logic.c	/^make_EHelper(xor) {$/;"	f
+make_EHelper	src/cpu/exec/prefix.c	/^make_EHelper(operand_size) {$/;"	f
+real	src/cpu/exec/prefix.c	/^make_EHelper(real);$/;"	v
+make_EHelper	src/cpu/exec/special.c	/^make_EHelper(inv) {$/;"	f
+make_EHelper	src/cpu/exec/special.c	/^make_EHelper(nemu_trap) {$/;"	f
+make_EHelper	src/cpu/exec/special.c	/^make_EHelper(nop) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(in) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(int) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(iret) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(lidt) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(mov_cr2r) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(mov_r2cr) {$/;"	f
+make_EHelper	src/cpu/exec/system.c	/^make_EHelper(out) {$/;"	f
+dev_raise_intr	src/cpu/intr.c	/^void dev_raise_intr() {$/;"	f
+raise_intr	src/cpu/intr.c	/^void raise_intr(uint8_t NO, vaddr_t ret_addr) {$/;"	f
+cpu	src/cpu/reg.c	/^CPU_state cpu;$/;"	v
+reg_test	src/cpu/reg.c	/^void reg_test() {$/;"	f
+regsb	src/cpu/reg.c	/^const char *regsb[] = {"al", "cl", "dl", "bl", "ah", "ch", "dh", "bh"};$/;"	v
+regsl	src/cpu/reg.c	/^const char *regsl[] = {"eax", "ecx", "edx", "ebx", "esp", "ebp", "esi", "edi"};$/;"	v
+regsw	src/cpu/reg.c	/^const char *regsw[] = {"ax", "cx", "dx", "bx", "sp", "bp", "si", "di"};$/;"	v
+TIMER_HZ	src/device/device.c	9;"	d	file:
+VGA_HZ	src/device/device.c	10;"	d	file:
+device_update	src/device/device.c	/^void device_update() {$/;"	f
+device_update_flag	src/device/device.c	/^static int device_update_flag = false;$/;"	v	file:
+init_device	src/device/device.c	/^void init_device() {$/;"	f
+it	src/device/device.c	/^static struct itimerval it;$/;"	v	typeref:struct:itimerval	file:
+jiffy	src/device/device.c	/^static uint64_t jiffy = 0;$/;"	v	file:
+sdl_clear_event_queue	src/device/device.c	/^void sdl_clear_event_queue() {$/;"	f
+timer_sig_handler	src/device/device.c	/^static void timer_sig_handler(int signum) {$/;"	f	file:
+update_screen_flag	src/device/device.c	/^static int update_screen_flag = false;$/;"	v	file:
+MMIO_SPACE_MAX	src/device/io/mmio.c	4;"	d	file:
+MMIO_t	src/device/io/mmio.c	/^} MMIO_t;$/;"	t	typeref:struct:__anon25	file:
+NR_MAP	src/device/io/mmio.c	5;"	d	file:
+add_mmio_map	src/device/io/mmio.c	/^void* add_mmio_map(paddr_t addr, int len, mmio_callback_t callback) {$/;"	f
+callback	src/device/io/mmio.c	/^  mmio_callback_t callback;$/;"	m	struct:__anon25	file:
+high	src/device/io/mmio.c	/^  paddr_t high;$/;"	m	struct:__anon25	file:
+is_mmio	src/device/io/mmio.c	/^int is_mmio(paddr_t addr) {$/;"	f
+low	src/device/io/mmio.c	/^  paddr_t low;$/;"	m	struct:__anon25	file:
+maps	src/device/io/mmio.c	/^static MMIO_t maps[NR_MAP];$/;"	v	file:
+mmio_read	src/device/io/mmio.c	/^uint32_t mmio_read(paddr_t addr, int len, int map_NO) {$/;"	f
+mmio_space	src/device/io/mmio.c	/^  uint8_t *mmio_space;$/;"	m	struct:__anon25	file:
+mmio_space_free_index	src/device/io/mmio.c	/^static uint32_t mmio_space_free_index = 0;$/;"	v	file:
+mmio_space_pool	src/device/io/mmio.c	/^static uint8_t mmio_space_pool[MMIO_SPACE_MAX];$/;"	v	file:
+mmio_write	src/device/io/mmio.c	/^void mmio_write(paddr_t addr, int len, uint32_t data, int map_NO) {$/;"	f
+nr_map	src/device/io/mmio.c	/^static int nr_map = 0;$/;"	v	file:
+NR_MAP	src/device/io/port-io.c	5;"	d	file:
+PIO_t	src/device/io/port-io.c	/^} PIO_t;$/;"	t	typeref:struct:__anon26	file:
+PORT_IO_SPACE_MAX	src/device/io/port-io.c	4;"	d	file:
+add_pio_map	src/device/io/port-io.c	/^void* add_pio_map(ioaddr_t addr, int len, pio_callback_t callback) {$/;"	f
+callback	src/device/io/port-io.c	/^  pio_callback_t callback;$/;"	m	struct:__anon26	file:
+high	src/device/io/port-io.c	/^  ioaddr_t high;$/;"	m	struct:__anon26	file:
+low	src/device/io/port-io.c	/^  ioaddr_t low;$/;"	m	struct:__anon26	file:
+maps	src/device/io/port-io.c	/^static PIO_t maps[NR_MAP];$/;"	v	file:
+nr_map	src/device/io/port-io.c	/^static int nr_map = 0;$/;"	v	file:
+pio_callback	src/device/io/port-io.c	/^static void pio_callback(ioaddr_t addr, int len, bool is_write) {$/;"	f	file:
+pio_read	src/device/io/port-io.c	/^uint32_t pio_read(ioaddr_t addr, int len) {$/;"	f
+pio_space	src/device/io/port-io.c	/^static uint8_t pio_space[PORT_IO_SPACE_MAX + 3];$/;"	v	file:
+pio_write	src/device/io/port-io.c	/^void pio_write(ioaddr_t addr, int len, uint32_t data) {$/;"	f
+I8042_DATA_PORT	src/device/keyboard.c	5;"	d	file:
+I8042_STATUS_HASKEY_MASK	src/device/keyboard.c	7;"	d	file:
+I8042_STATUS_PORT	src/device/keyboard.c	6;"	d	file:
+KEYBOARD_IRQ	src/device/keyboard.c	8;"	d	file:
+KEYDOWN_MASK	src/device/keyboard.c	38;"	d	file:
+KEY_QUEUE_LEN	src/device/keyboard.c	34;"	d	file:
+XX	src/device/keyboard.c	29;"	d	file:
+_KEYS	src/device/keyboard.c	/^  _KEYS(_KEY_NAME)$/;"	e	enum:__anon27	file:
+_KEYS	src/device/keyboard.c	13;"	d	file:
+_KEY_NAME	src/device/keyboard.c	22;"	d	file:
+_KEY_NONE	src/device/keyboard.c	/^  _KEY_NONE = 0,$/;"	e	enum:__anon27	file:
+i8042_data_port_base	src/device/keyboard.c	/^static uint32_t *i8042_data_port_base;$/;"	v	file:
+i8042_io_handler	src/device/keyboard.c	/^void i8042_io_handler(ioaddr_t addr, int len, bool is_write) {$/;"	f
+i8042_status_port_base	src/device/keyboard.c	/^static uint8_t *i8042_status_port_base;$/;"	v	file:
+init_i8042	src/device/keyboard.c	/^void init_i8042() {$/;"	f
+key_f	src/device/keyboard.c	/^static int key_f = 0, key_r = 0;$/;"	v	file:
+key_queue	src/device/keyboard.c	/^static int key_queue[KEY_QUEUE_LEN];$/;"	v	file:
+key_r	src/device/keyboard.c	/^static int key_f = 0, key_r = 0;$/;"	v	file:
+keymap	src/device/keyboard.c	/^static uint32_t keymap[256] = {$/;"	v	file:
+send_key	src/device/keyboard.c	/^void send_key(uint8_t scancode, bool is_keydown) {$/;"	f
+CH_OFFSET	src/device/serial.c	7;"	d	file:
+LSR_OFFSET	src/device/serial.c	8;"	d	file:
+SERIAL_PORT	src/device/serial.c	6;"	d	file:
+init_serial	src/device/serial.c	/^void init_serial() {$/;"	f
+serial_io_handler	src/device/serial.c	/^void serial_io_handler(ioaddr_t addr, int len, bool is_write) {$/;"	f
+serial_port_base	src/device/serial.c	/^static uint8_t *serial_port_base;$/;"	v	file:
+RTC_PORT	src/device/timer.c	5;"	d	file:
+init_timer	src/device/timer.c	/^void init_timer() {$/;"	f
+rtc_io_handler	src/device/timer.c	/^void rtc_io_handler(ioaddr_t addr, int len, bool is_write) {$/;"	f
+rtc_port_base	src/device/timer.c	/^static uint32_t *rtc_port_base;$/;"	v	file:
+timer_intr	src/device/timer.c	/^void timer_intr() {$/;"	f
+SCREEN_H	src/device/vga.c	10;"	d	file:
+SCREEN_W	src/device/vga.c	11;"	d	file:
+VMEM	src/device/vga.c	8;"	d	file:
+init_vga	src/device/vga.c	/^void init_vga() {$/;"	f
+renderer	src/device/vga.c	/^static SDL_Renderer *renderer;$/;"	v	file:
+texture	src/device/vga.c	/^static SDL_Texture *texture;$/;"	v	file:
+update_screen	src/device/vga.c	/^void update_screen() {$/;"	f
+vga_vmem_io_handler	src/device/vga.c	/^void vga_vmem_io_handler(paddr_t addr, int len, bool is_write) {$/;"	f
+vmem	src/device/vga.c	/^static uint32_t (*vmem) [SCREEN_W];$/;"	v	file:
+window	src/device/vga.c	/^static SDL_Window *window;$/;"	v	file:
+main	src/main.c	/^int main(int argc, char *argv[]) {$/;"	f
+PMEM_SIZE	src/memory/memory.c	3;"	d	file:
+paddr_read	src/memory/memory.c	/^uint32_t paddr_read(paddr_t addr, int len) {$/;"	f
+paddr_write	src/memory/memory.c	/^void paddr_write(paddr_t addr, int len, uint32_t data) {$/;"	f
+pmem	src/memory/memory.c	/^uint8_t pmem[PMEM_SIZE];$/;"	v
+pmem_rw	src/memory/memory.c	5;"	d	file:
+vaddr_read	src/memory/memory.c	/^uint32_t vaddr_read(vaddr_t addr, int len) {$/;"	f
+vaddr_write	src/memory/memory.c	/^void vaddr_write(vaddr_t addr, int len, uint32_t data) {$/;"	f
+logo	src/misc/logo.c	/^unsigned char logo[] = {$/;"	v
+MAX_INSTR_TO_PRINT	src/monitor/cpu-exec.c	9;"	d	file:
+cpu_exec	src/monitor/cpu-exec.c	/^void cpu_exec(uint64_t n) {$/;"	f
+nemu_state	src/monitor/cpu-exec.c	/^int nemu_state = NEMU_STOP;$/;"	v
+NR_REGEX	src/monitor/debug/expr.c	30;"	d	file:
+TK_EQ	src/monitor/debug/expr.c	/^  TK_NOTYPE = 256, TK_EQ$/;"	e	enum:__anon28	file:
+TK_NOTYPE	src/monitor/debug/expr.c	/^  TK_NOTYPE = 256, TK_EQ$/;"	e	enum:__anon28	file:
+Token	src/monitor/debug/expr.c	/^} Token;$/;"	t	typeref:struct:token	file:
+expr	src/monitor/debug/expr.c	/^uint32_t expr(char *e, bool *success) {$/;"	f
+init_regex	src/monitor/debug/expr.c	/^void init_regex() {$/;"	f
+make_token	src/monitor/debug/expr.c	/^static bool make_token(char *e) {$/;"	f	file:
+nr_token	src/monitor/debug/expr.c	/^int nr_token;$/;"	v
+re	src/monitor/debug/expr.c	/^static regex_t re[NR_REGEX];$/;"	v	file:
+regex	src/monitor/debug/expr.c	/^  char *regex;$/;"	m	struct:rule	file:
+rule	src/monitor/debug/expr.c	/^static struct rule {$/;"	s	file:
+rules	src/monitor/debug/expr.c	/^} rules[] = {$/;"	v	typeref:struct:rule	file:
+str	src/monitor/debug/expr.c	/^  char str[32];$/;"	m	struct:token	file:
+token	src/monitor/debug/expr.c	/^typedef struct token {$/;"	s	file:
+token_type	src/monitor/debug/expr.c	/^  int token_type;$/;"	m	struct:rule	file:
+tokens	src/monitor/debug/expr.c	/^Token tokens[32];$/;"	v
+type	src/monitor/debug/expr.c	/^  int type;$/;"	m	struct:token	file:
+NR_CMD	src/monitor/debug/ui.c	54;"	d	file:
+cmd_c	src/monitor/debug/ui.c	/^static int cmd_c(char *args) {$/;"	f	file:
+cmd_help	src/monitor/debug/ui.c	/^static int cmd_help(char *args) {$/;"	f	file:
+cmd_q	src/monitor/debug/ui.c	/^static int cmd_q(char *args) {$/;"	f	file:
+cmd_table	src/monitor/debug/ui.c	/^} cmd_table [] = {$/;"	v	typeref:struct:__anon29	file:
+description	src/monitor/debug/ui.c	/^  char *description;$/;"	m	struct:__anon29	file:
+handler	src/monitor/debug/ui.c	/^  int (*handler) (char *);$/;"	m	struct:__anon29	file:
+name	src/monitor/debug/ui.c	/^  char *name;$/;"	m	struct:__anon29	file:
+rl_gets	src/monitor/debug/ui.c	/^char* rl_gets() {$/;"	f
+ui_mainloop	src/monitor/debug/ui.c	/^void ui_mainloop(int is_batch_mode) {$/;"	f
+NR_WP	src/monitor/debug/watchpoint.c	4;"	d	file:
+free_	src/monitor/debug/watchpoint.c	/^static WP *head, *free_;$/;"	v	file:
+head	src/monitor/debug/watchpoint.c	/^static WP *head, *free_;$/;"	v	file:
+init_wp_pool	src/monitor/debug/watchpoint.c	/^void init_wp_pool() {$/;"	f
+wp_pool	src/monitor/debug/watchpoint.c	/^static WP wp_pool[NR_WP];$/;"	v	file:
+diff_test_skip_nemu	src/monitor/diff-test/diff-test.c	/^void diff_test_skip_nemu() { is_skip_nemu = true; }$/;"	f
+diff_test_skip_qemu	src/monitor/diff-test/diff-test.c	/^void diff_test_skip_qemu() { is_skip_qemu = true; }$/;"	f
+difftest_step	src/monitor/diff-test/diff-test.c	/^void difftest_step(uint32_t eip) {$/;"	f
+init_difftest	src/monitor/diff-test/diff-test.c	/^void init_difftest(void) {$/;"	f
+init_qemu_reg	src/monitor/diff-test/diff-test.c	/^void init_qemu_reg() {$/;"	f
+is_skip_nemu	src/monitor/diff-test/diff-test.c	/^static bool is_skip_nemu;$/;"	v	file:
+is_skip_qemu	src/monitor/diff-test/diff-test.c	/^static bool is_skip_qemu;$/;"	v	file:
+mbr	src/monitor/diff-test/diff-test.c	/^static uint8_t mbr[] = {$/;"	v	file:
+regcpy_from_nemu	src/monitor/diff-test/diff-test.c	23;"	d	file:
+conn	src/monitor/diff-test/gdb-host.c	/^static struct gdb_conn *conn;$/;"	v	typeref:struct:gdb_conn	file:
+gdb_connect_qemu	src/monitor/diff-test/gdb-host.c	/^bool gdb_connect_qemu(void) {$/;"	f
+gdb_exit	src/monitor/diff-test/gdb-host.c	/^void gdb_exit(void) {$/;"	f
+gdb_getregs	src/monitor/diff-test/gdb-host.c	/^bool gdb_getregs(union gdb_regs *r) {$/;"	f
+gdb_memcpy_to_qemu	src/monitor/diff-test/gdb-host.c	/^bool gdb_memcpy_to_qemu(uint32_t dest, void *src, int len) {$/;"	f
+gdb_memcpy_to_qemu_small	src/monitor/diff-test/gdb-host.c	/^static bool gdb_memcpy_to_qemu_small(uint32_t dest, void *src, int len) {$/;"	f	file:
+gdb_setregs	src/monitor/diff-test/gdb-host.c	/^bool gdb_setregs(union gdb_regs *r) {$/;"	f
+gdb_si	src/monitor/diff-test/gdb-host.c	/^bool gdb_si(void) {$/;"	f
+ack	src/monitor/diff-test/protocol.c	/^  bool ack;$/;"	m	struct:gdb_conn	file:
+gdb_begin	src/monitor/diff-test/protocol.c	/^static struct gdb_conn* gdb_begin(int fd) {$/;"	f	file:
+gdb_begin_inet	src/monitor/diff-test/protocol.c	/^struct gdb_conn* gdb_begin_inet(const char *addr, uint16_t port) {$/;"	f
+gdb_conn	src/monitor/diff-test/protocol.c	/^struct gdb_conn {$/;"	s	file:
+gdb_decode_hex	src/monitor/diff-test/protocol.c	/^uint16_t gdb_decode_hex(uint8_t msb, uint8_t lsb) {$/;"	f
+gdb_decode_hex_str	src/monitor/diff-test/protocol.c	/^uint64_t gdb_decode_hex_str(uint8_t *bytes) {$/;"	f
+gdb_end	src/monitor/diff-test/protocol.c	/^void gdb_end(struct gdb_conn *conn) {$/;"	f
+gdb_recv	src/monitor/diff-test/protocol.c	/^uint8_t* gdb_recv(struct gdb_conn *conn, size_t *size) {$/;"	f
+gdb_send	src/monitor/diff-test/protocol.c	/^void gdb_send(struct gdb_conn *conn, const uint8_t *command, size_t size) {$/;"	f
+gdb_start_noack	src/monitor/diff-test/protocol.c	/^const char* gdb_start_noack(struct gdb_conn *conn) {$/;"	f
+hex_encode	src/monitor/diff-test/protocol.c	/^uint8_t hex_encode(uint8_t digit) {$/;"	f
+hex_nibble	src/monitor/diff-test/protocol.c	/^hex_nibble(uint8_t hex) {$/;"	f	file:
+in	src/monitor/diff-test/protocol.c	/^  FILE *in;$/;"	m	struct:gdb_conn	file:
+out	src/monitor/diff-test/protocol.c	/^  FILE *out;$/;"	m	struct:gdb_conn	file:
+recv_packet	src/monitor/diff-test/protocol.c	/^static uint8_t* recv_packet(FILE *in, size_t *ret_size, bool* ret_sum_ok) {$/;"	f	file:
+send_packet	src/monitor/diff-test/protocol.c	/^static void send_packet(FILE *out, const uint8_t *command, size_t size) {$/;"	f	file:
+array	src/monitor/diff-test/protocol.h	/^    uint32_t array[77];$/;"	m	struct:gdb_regs::__anon31
+cs	src/monitor/diff-test/protocol.h	/^    uint32_t cs, ss, ds, es, fs, gs;$/;"	m	struct:gdb_regs::__anon30
+ds	src/monitor/diff-test/protocol.h	/^    uint32_t cs, ss, ds, es, fs, gs;$/;"	m	struct:gdb_regs::__anon30
+eax	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+ebp	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+ebx	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+ecx	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+edi	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+edx	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+eflags	src/monitor/diff-test/protocol.h	/^    uint32_t eip, eflags;$/;"	m	struct:gdb_regs::__anon30
+eip	src/monitor/diff-test/protocol.h	/^    uint32_t eip, eflags;$/;"	m	struct:gdb_regs::__anon30
+es	src/monitor/diff-test/protocol.h	/^    uint32_t cs, ss, ds, es, fs, gs;$/;"	m	struct:gdb_regs::__anon30
+esi	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+esp	src/monitor/diff-test/protocol.h	/^    uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;$/;"	m	struct:gdb_regs::__anon30
+fs	src/monitor/diff-test/protocol.h	/^    uint32_t cs, ss, ds, es, fs, gs;$/;"	m	struct:gdb_regs::__anon30
+gdb_regs	src/monitor/diff-test/protocol.h	/^union gdb_regs {$/;"	u
+gs	src/monitor/diff-test/protocol.h	/^    uint32_t cs, ss, ds, es, fs, gs;$/;"	m	struct:gdb_regs::__anon30
+ss	src/monitor/diff-test/protocol.h	/^    uint32_t cs, ss, ds, es, fs, gs;$/;"	m	struct:gdb_regs::__anon30
+ENTRY_START	src/monitor/monitor.c	4;"	d	file:
+img_file	src/monitor/monitor.c	/^static char *img_file = NULL;$/;"	v	file:
+init_log	src/monitor/monitor.c	/^static inline void init_log() {$/;"	f	file:
+init_monitor	src/monitor/monitor.c	/^int init_monitor(int argc, char *argv[]) {$/;"	f
+is_batch_mode	src/monitor/monitor.c	/^static int is_batch_mode = false;$/;"	v	file:
+load_default_img	src/monitor/monitor.c	/^static inline int load_default_img() {$/;"	f	file:
+load_img	src/monitor/monitor.c	/^static inline void load_img() {$/;"	f	file:
+log_file	src/monitor/monitor.c	/^static char *log_file = NULL;$/;"	v	file:
+log_fp	src/monitor/monitor.c	/^FILE *log_fp = NULL;$/;"	v
+parse_args	src/monitor/monitor.c	/^static inline void parse_args(int argc, char *argv[]) {$/;"	f	file:
+restart	src/monitor/monitor.c	/^static inline void restart() {$/;"	f	file:
+welcome	src/monitor/monitor.c	/^static inline void welcome() {$/;"	f	file:
