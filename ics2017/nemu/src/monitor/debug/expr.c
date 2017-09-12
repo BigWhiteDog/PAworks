@@ -7,9 +7,20 @@
 #include <regex.h>
 
 enum {
-  TK_NOTYPE = 256, TK_EQ
-
+  TK_NOTYPE = 256, TK_EQ,
+  
   /* TODO: Add more token types */
+  TK_EAX,TK_AX,TK_AH,TK_AL,
+  TK_EDX,TK_DX,TK_DH,TK_DL,
+  TK_ECX,TK_CX,TK_CH,TK_CL,
+  TK_EBX,TK_BX,TK_BH,TK_BL,
+  TK_EBP,TK_BP,
+  TK_ESI,TK_SI,
+  TK_EDI,TK_DI,
+  TK_ESP,TK_SP,
+  TK_EIP
+
+  
 
 };
 
@@ -21,7 +32,7 @@ static struct rule {
   /* TODO: Add more rules.
    * Pay attention to the precedence level of different rules.
    */
-
+  {"\b$eax\b"}
   {" +", TK_NOTYPE},    // spaces
   {"\\+", '+'},         // plus
   {"==", TK_EQ}         // equal

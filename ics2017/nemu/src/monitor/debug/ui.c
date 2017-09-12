@@ -38,6 +38,99 @@ static int cmd_q(char *args) {
 
 static int cmd_help(char *args);
 
+#include<inttypes.h>
+static int cmd_si(char *args) {
+  
+  char *arg = strtok(NULL, " ");
+  if (arg == NULL) {
+    /* no argument given */
+    cpu_exec(1);
+  }
+  else {
+    uint64_t temp_n;
+    int temp_flag;
+    
+    temp_flag=sscanf(arg,"%" PRIu64 ,&temp_n);
+    
+    if(temp_flag<=0)
+      printf("Wrong input '%s'\n", arg);
+    else
+      cpu_exec(temp_n);
+  }
+  return 0;
+
+}
+static int cmd_info(char *args) {
+
+  char *arg = strtok(NULL, " ");
+  if (arg == NULL) {
+    /* no argument given */
+    printf("need w or r!\n");
+  }
+  else {
+    if(arg[0]=='r'&&arg[1]=='\0')
+    {
+      printf("=============\n");
+      printf("eip: %8x\n\n",cpu.eip);
+
+      printf("eax: %8x\n",cpu.gpr[0]._32 );
+      printf("edx: %8x\n",cpu.gpr[1]._32 );
+      printf("ecx: %8x\n",cpu.gpr[2]._32 );
+      printf("ebx: %8x\n",cpu.gpr[3]._32 );
+      printf("ebp: %8x\n",cpu.gpr[4]._32 );
+      printf("esi: %8x\n",cpu.gpr[5]._32 );
+      printf("edi: %8x\n",cpu.gpr[6]._32 );
+      printf("esp: %8x\n",cpu.gpr[7]._32 );
+
+    }
+    else if(arg[0]=='w'&&arg[1]=='\0')
+    {
+
+    }
+    else
+    {
+      printf("wrong argument!\n");
+    }
+  }
+  return 0;
+}
+static int cmd_p(char *args) {
+  return 0;
+}
+static int cmd_x(char *args) {
+  char *arg = strtok(NULL, " ");
+  if (arg == NULL) {
+    /* no argument given */
+    printf("need arguments!\n");
+  }
+  else{
+    char *charp_n=arg;
+    char *charp_expr=strtok(NULL, " ");
+    uint temp_n;
+    int scan_flag;
+    scan_flag=sscanf(charp_n,"%u",&temp_n);
+    if(scan_flag<=0)
+    {
+      printf("wrong N!\n");
+      return 0;
+    }
+    paddr_t addr;
+
+    uint i;
+    for (i = 0; i < temp_n; ++i)
+    {
+      printf("%8x\n",paddr_read(addr,4));
+      addr+=4;
+    }
+  }
+  return 0;
+}
+static int cmd_w(char *args) {
+  return 0;
+}
+static int cmd_d(char *args) {
+  return 0;
+}
 static struct {
   char *name;
   char *description;
@@ -46,9 +139,15 @@ static struct {
   { "help", "Display informations about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
+  {"si","step n instructions",cmd_si},
+  {"info","print target reg or watchpoint",cmd_info},
+  {"p","print the value of an EXPR",cmd_p},
+  {"x","scan the content of target Mem Addr in N words",cmd_x},
+  {"w","watch an EXPR, pause when it changes",cmd_w},
+  {"d","delete watchpoint N",cmd_d}
 
   /* TODO: Add more commands */
-
+  /*done*/
 };
 
 #define NR_CMD (sizeof(cmd_table) / sizeof(cmd_table[0]))
