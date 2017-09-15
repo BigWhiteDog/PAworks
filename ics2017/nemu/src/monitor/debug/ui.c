@@ -71,16 +71,16 @@ static int cmd_info(char *args) {
     if(arg[0]=='r'&&arg[1]=='\0')
     {
       printf("=============\n");
-      printf("eip: %8x\n\n",cpu.eip);
+      printf("eip: %08x\n\n",cpu.eip);
 
-      printf("eax: %8x\n",cpu.gpr[0]._32 );
-      printf("edx: %8x\n",cpu.gpr[1]._32 );
-      printf("ecx: %8x\n",cpu.gpr[2]._32 );
-      printf("ebx: %8x\n",cpu.gpr[3]._32 );
-      printf("ebp: %8x\n",cpu.gpr[4]._32 );
-      printf("esi: %8x\n",cpu.gpr[5]._32 );
-      printf("edi: %8x\n",cpu.gpr[6]._32 );
-      printf("esp: %8x\n",cpu.gpr[7]._32 );
+      printf("eax: %08x\n",cpu.gpr[0]._32 );
+      printf("edx: %08x\n",cpu.gpr[1]._32 );
+      printf("ecx: %08x\n",cpu.gpr[2]._32 );
+      printf("ebx: %08x\n",cpu.gpr[3]._32 );
+      printf("ebp: %08x\n",cpu.gpr[4]._32 );
+      printf("esi: %08x\n",cpu.gpr[5]._32 );
+      printf("edi: %08x\n",cpu.gpr[6]._32 );
+      printf("esp: %08x\n",cpu.gpr[7]._32 );
 
     }
     else if(arg[0]=='w'&&arg[1]=='\0')
