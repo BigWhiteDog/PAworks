@@ -114,12 +114,12 @@ static int cmd_x(char *args) {
       printf("wrong N!\n");
       return 0;
     }
-    paddr_t addr;
+    vaddr_t addr;
 
     uint i;
     for (i = 0; i < temp_n; ++i)
     {
-      printf("%8x\n",paddr_read(addr,4));
+      printf("%8x\n",vaddr_read(addr,4));
       addr+=4;
     }
   }
